@@ -3,6 +3,8 @@ const add = (num1, num2) => num1 + num2;
 
 const multiply = (a, b) => a * b;
 
-export { x, add, multiply };
+export { x, multiply };
+
+export default add;
 
 // console.log(module);

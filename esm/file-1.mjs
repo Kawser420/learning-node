@@ -1,14 +1,21 @@
-const var1 = require("./file-2.js");
-// Aliasing
-const { x: x3, add: add3, multiply: multiply3, y } = require("./file-3.js");
+// file-2 import
+import { x, multiply } from "./file-2.mjs";
+import add from "./file-2.mjs";
 
-// file 2 work
-console.log(var1.x);
-console.log(var1.add(10, 10));
-console.log(var1.multiply(25, 25));
+// file-3 import
+import {
+  x as X3,
+  add as ADD3,
+  multiply as MULTIPLY3,
+  y as Y3,
+} from "./file-3.mjs";
 
+// file-2 work--------------- Aliasing
+console.log(x);
+console.log(add(3, 100));
+console.log(multiply);
 // file 3 work--------> Aliasing
-console.log(x3);
-console.log(add3(20, 10, 70));
-console.log(multiply3(100, 100));
-console.log(y);
+console.log(X3);
+console.log(ADD3(20, 10, 70));
+console.log(MULTIPLY3(100, 100));
+console.log(Y3);
