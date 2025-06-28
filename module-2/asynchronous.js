@@ -3,6 +3,8 @@
 
 const fs = require("fs");
 
+console.log("Task - 1");
+
 fs.readFile("./hello.txt", { encoding: "utf8" }, (err, data) => {
   if (err) {
     console.log("Something Went Wrong", err);
@@ -10,3 +12,5 @@ fs.readFile("./hello.txt", { encoding: "utf8" }, (err, data) => {
   }
   console.log(data);
 });
+
+console.log("Task - 4");
